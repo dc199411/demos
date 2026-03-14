@@ -1,0 +1,16 @@
+{
+  "name": "multiverse-of-games-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root wrapper for Vercel monorepo detection and delegated scripts.",
+  "scripts": {
+    "dev": "npm --prefix three-card-monte run dev",
+    "build": "npm --prefix three-card-monte run build",
+    "start": "npm --prefix three-card-monte run start",
+    "lint": "npm --prefix three-card-monte run lint",
+    "install:app": "npm --prefix three-card-monte ci"
+  },
+  "dependencies": {
+    "next": "^14.2.15"
+  }
+}

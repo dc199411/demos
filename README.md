@@ -1,73 +1,75 @@
 ![Base](logo.webp)
 
-# Base Demo Applications
+# Multiverse Of Games
 
-A repository of demo applications that utilize Base and Coinbase Developer Platform products.
+Multiverse Of Games is the primary and only application in this repository. It is a Base Mini App experience with a landing-first interface, wallet-native onboarding, and interactive gameplay.
 
-<!-- Badge row 1 - status -->
+## App Location
 
-[![GitHub contributors](https://img.shields.io/github/contributors/base/demos)](https://github.com/base/demos/graphs/contributors)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/w/base/demos)](https://github.com/base/demos/graphs/contributors)
-[![GitHub Stars](https://img.shields.io/github/stars/base/demos.svg)](https://github.com/base/demos/stargazers)
-![GitHub repo size](https://img.shields.io/github/repo-size/base/demos)
-[![GitHub](https://img.shields.io/github/license/base/demos?color=blue)](https://github.com/base/demos/blob/master/LICENSE.md)
-
-<!-- Badge row 2 - links and profiles -->
-
-[![Website base.org](https://img.shields.io/website-up-down-green-red/https/base.org.svg)](https://base.org)
-[![Blog](https://img.shields.io/badge/blog-up-green)](https://base.mirror.xyz/)
-[![Docs](https://img.shields.io/badge/docs-up-green)](https://docs.base.org/)
-[![Discord](https://img.shields.io/discord/1067165013397213286?label=discord)](https://base.org/discord)
-[![Twitter Base](https://img.shields.io/twitter/follow/Base?style=social)](https://twitter.com/Base)
-
-<!-- Badge row 3 - detailed status -->
-
-[![GitHub pull requests by-label](https://img.shields.io/github/issues-pr-raw/base/demos)](https://github.com/base/demos/pulls)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/base/demos.svg)](https://github.com/base/demos/issues)
+- `three-card-monte/`
 
 ## Overview
 
-This repository contains example applications demonstrating various [Base] and [Coinbase Developer Platform] features. Each demo is designed to be simple, educational, and ready to run.
+Multiverse Of Games is built with:
 
-## Available Demos
+- Next.js
+- MiniKit
+- OnchainKit
+- Tailwind CSS
 
-| Demo Name | Type | Location | Description |
-|-----------|------|----------|-------------|
-| **Agent Spend Permissions** | Base Account | `base-account/agent-spend-permissions/` | AI-powered Zora coin purchasing with Base Account spend permissions and gas-free transactions |
-| **Trading Agent** | Agents | `agents/trading-agent/` | CLI that scaffolds a fully configured LangChain trading agent on Base from a plain-English strategy |
-| **Base Pay Amazon** | Base Account | `base-account/base-pay-amazon/` | Chrome extension and checkout app that adds Base Pay to Amazon product pages |
-| **Base App Coins** | Base Account | `base-app-coins/` | Index and load metadata for Uniswap v4 pools related to coins created via the Base App |
-| **Hangman Onchain** | Paymaster | `paymaster/hangman-onchain/` | Classic hangman game with onchain win recording using Coinbase CDP |
-| **Lingos Game** | Paymaster | `paymaster/onchain-game-lingos/` | Phrase completion game testing knowledge of international phrases and expressions |
-| **Full Mini App Demo** | MiniKit | `minikit/mini-app-full-demo/` | Comprehensive Base Mini App demo showcasing all functionality in Base App |
-| **Mini App Route** | MiniKit | `minikit/mini-app-route/` | Basic Next.js mini app template with routing examples |
-| **Mini App Wrapped** | MiniKit | `minikit/mini-app-wrapped/` | Simple Next.js mini app with MiniKit provider wrapper |
-| **Mini Neynar** | MiniKit | `minikit/mini-neynar/` | MiniKit template with Neynar API integration for Farcaster data |
-| **Mini Zora** | MiniKit | `minikit/my-mini-zora/` | MiniKit template integrated with Zora protocol for NFT interactions |
-| **Simple Mini App** | MiniKit | `minikit/my-simple-mini-app/` | Basic MiniKit template with essential features and notifications |
-| **Three Card Monte** | MiniKit | `minikit/three-card-monte/` | Interactive card game mini app with onchain rewards and leaderboard |
+The current experience includes:
 
-## Getting Started
+- branded landing page
+- wallet connection and identity UI
+- connected-state feedback
+- bottom navigation shell
+- Three Card Monte gameplay entry state
 
-1. Clone this repository
-2. Navigate to the specific demo directory you want to explore
-3. Follow the README instructions in each demo directory
+## Quick Start
 
-## Requirements
+1. Install dependencies:
 
-- Node.js (v16 or higher)
-- npm or yarn
-- A Base-compatible wallet (like Coinbase Wallet)
+```bash
+npm --prefix three-card-monte install
+```
 
-## Contributing
+2. Run locally:
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+```bash
+npm --prefix three-card-monte run dev
+```
+
+3. Open:
+
+```text
+http://localhost:3000
+```
+
+## Deployment Notes
+
+- Preferred Vercel setup: set **Root Directory** to `three-card-monte`.
+- Repository-root fallback is included via `vercel.json`.
+
+
+### Vercel troubleshooting
+
+If Vercel shows:
+
+- `No Next.js version detected. Make sure your package.json has "next"...`
+
+then ensure one of the following:
+
+1. **Root Directory** in Vercel is set to `three-card-monte`, **or**
+2. Deploy from repository root with the included `vercel.json` + root `package.json` wrapper scripts.
+
+This repository now includes a root `package.json` with `next` and delegated scripts so Vercel can detect Next.js even when root deploy settings are used.
+
+## Documentation
+
+- App documentation and brand/design details: `three-card-monte/README.md`
+- Contributor operating guidance: `three-card-monte/AGENTS.md`
+- Base docs LLM index: https://docs.base.org/llms.txt
 
 ## License
 
 This project is licensed under the terms of the included LICENSE file.
-
----
-
-[Coinbase Developer Platform]: https://portal.cdp.coinbase.com
-[Base]: https://base.org
