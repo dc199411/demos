@@ -11,9 +11,10 @@ export function Providers(props: { children: ReactNode }) {
       chain={base}
       config={{
         appearance: {
-          mode: "auto",
+          mode: "dark",
           theme: "mini-app-theme",
-          name: process.env.NEXT_PUBLIC_ONCHAINKIT_PROJECT_NAME,
+          name:
+            process.env.NEXT_PUBLIC_ONCHAINKIT_PROJECT_NAME ?? "Multiverse Of Games",
           logo: process.env.NEXT_PUBLIC_ICON_URL,
         },
       }}
