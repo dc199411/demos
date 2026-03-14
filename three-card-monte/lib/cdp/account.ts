@@ -1,4 +1,4 @@
-import { cdp } from "./client";
+import { getCdpClient } from "./client";
 
 export async function getCDPAccountByAddress(address: string) {
   // Ensure address is properly formatted
@@ -7,7 +7,7 @@ export async function getCDPAccountByAddress(address: string) {
   }
 
   try {
-    const account = await cdp.evm.getAccount({
+    const account = await getCdpClient().evm.getAccount({
       address: address as `0x${string}`,
     });
     return account;

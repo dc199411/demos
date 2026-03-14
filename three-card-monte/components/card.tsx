@@ -100,7 +100,7 @@ export const Card = ({ id, isFlipped, image, onClick, isTarget, width = 200, hei
       img.crossOrigin = "anonymous"
 
       // Using placeholder for now, will be replaced with actual image
-      img.src = "/colorful-paintbrush.png"
+      img.src = image || "/colorful-paintbrush.png"
 
       img.onload = () => {
         const imageSize = width < 160 ? 80 : 120
@@ -129,7 +129,7 @@ export const Card = ({ id, isFlipped, image, onClick, isTarget, width = 200, hei
       img.crossOrigin = "anonymous"
 
       // Using placeholder for now, will be replaced with actual image
-      img.src = id === 2 ? "/fantasy-card-item.png" : "/magical-item-card.png"
+      img.src = image || (id === 2 ? "/fantasy-card-item.png" : "/magical-item-card.png")
 
       img.onload = () => {
         const imageSize = width < 160 ? 80 : 120
@@ -146,7 +146,7 @@ export const Card = ({ id, isFlipped, image, onClick, isTarget, width = 200, hei
         ctx.fillText(`Card ${id}`, canvas.width / 2, 30)
       }
     }
-  }, [id, isTarget, width, height])
+  }, [id, image, isTarget, width, height])
 
   return (
     <div className="relative cursor-pointer" onClick={onClick} style={{ width: `${width}px`, height: `${height}px` }}>

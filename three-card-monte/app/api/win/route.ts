@@ -4,7 +4,7 @@ import { baseSepolia } from "viem/chains";
 import { GAME_CONTRACT_ADDRESS_SEPOLIA } from "@/lib/constants";
 import { GAME_CONTRACT_ABI } from "@/lib/abi";
 import { getCDPAccountByAddress } from "@/lib/cdp/account";
-import { cdp } from "@/lib/cdp/client";
+import { getCdpClient } from "@/lib/cdp/client";
 
 // Initialize the public client for transaction monitoring
 const publicClient = createPublicClient({
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
       from: account.address,
     });
 
-    const txResult = await cdp.evm.sendTransaction({
+    const txResult = await getCdpClient().evm.sendTransaction({
       address: account.address,
       network: "base-sepolia",
       transaction: {
