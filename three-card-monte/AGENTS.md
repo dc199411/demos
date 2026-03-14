@@ -45,6 +45,8 @@ Always prefer these sources when implementing or updating features:
 
 - For Vercel detection issues (`No Next.js version detected`), verify root directory and ensure wrapper `package.json` + `vercel.json` are present at repo root.
 
+- `three-card-monte/vercel.json` is provided for projects configured with Root Directory set to `three-card-monte`.
+
 ## Documentation Hygiene
 - Update `README.md` whenever major UI, wallet flow, or brand choices change.
 - Add new long-term contributor guidance here rather than scattering notes across commits.

@@ -115,7 +115,7 @@ npm run dev
 ## Vercel Deployment (404 Fix)
 
 
-> If Vercel reports `No Next.js version detected`, either set Root Directory to `three-card-monte` or use root deployment with the repository-level `package.json` + `vercel.json` wrappers.
+> If Vercel reports `No Next.js version detected`, first set Root Directory to `three-card-monte`. If you must deploy from repo root, use the repository-level `package.json` + `vercel.json` wrappers.
 
 If deployment reports success but the production URL shows **404**, it usually means Vercel is building from the repository root instead of the app directory.
 
@@ -123,5 +123,6 @@ Use one of these setups:
 
 1. **Recommended:** In Vercel project settings set **Root Directory** to `three-card-monte`.
 2. **Fallback (included in this repo):** keep root deploy and use repository-level `vercel.json` + `package.json` wrapper scripts that delegate into `three-card-monte`.
+3. Optional: if Root Directory is `three-card-monte`, the local `three-card-monte/vercel.json` is already aligned for standard Next.js commands.
 
 After changing settings, trigger a **Redeploy** from Vercel.

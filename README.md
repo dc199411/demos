@@ -47,8 +47,9 @@ http://localhost:3000
 
 ## Deployment Notes
 
-- Preferred Vercel setup: set **Root Directory** to `three-card-monte`.
-- Repository-root fallback is included via `vercel.json`.
+- **Recommended:** set Vercel **Root Directory** to `three-card-monte` (this uses `three-card-monte/package.json` directly).
+- **Fallback:** deploy from repo root using root `package.json` + root `vercel.json` wrappers.
+- This repo now also includes `three-card-monte/vercel.json` so either root-mode or subdirectory-mode deployments are explicitly configured.
 
 
 ### Vercel troubleshooting
@@ -62,7 +63,7 @@ then ensure one of the following:
 1. **Root Directory** in Vercel is set to `three-card-monte`, **or**
 2. Deploy from repository root with the included `vercel.json` + root `package.json` wrapper scripts.
 
-This repository now includes a root `package.json` with `next` and delegated scripts so Vercel can detect Next.js even when root deploy settings are used.
+This repository now includes both a root `package.json` (with `next` and delegated scripts) and `three-card-monte/vercel.json` to support either Vercel Root Directory configuration.
 
 ## Documentation
 
