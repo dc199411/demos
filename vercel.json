@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "three-card-monte/package.json",
+      "use": "@vercel/next"
+    }
+  ]
+}
