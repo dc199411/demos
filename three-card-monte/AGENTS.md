@@ -41,9 +41,9 @@ Always prefer these sources when implementing or updating features:
 ## Vercel Deployment Guardrails
 - If deploying from the repository root, Vercel must run the app from `three-card-monte/`.
 - Prefer setting **Project Settings → Root Directory = `three-card-monte`**.
-- If root directory cannot be changed, use repository root `vercel.json` + `package.json` wrapper scripts that delegate into `three-card-monte`.
+- If root directory cannot be changed, use repository root `vercel.json` with explicit `@vercel/next` build mapping to `three-card-monte/package.json`.
 
-- For Vercel detection issues (`No Next.js version detected`), verify root directory and ensure wrapper `package.json` + `vercel.json` are present at repo root.
+- For Vercel detection issues (`No Next.js version detected`), verify root directory or use explicit repo-root build mapping in `vercel.json`.
 
 - `three-card-monte/vercel.json` is provided for projects configured with Root Directory set to `three-card-monte`.
 
