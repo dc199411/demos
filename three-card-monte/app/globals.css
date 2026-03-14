@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 228 50% 6%;
+    --foreground: 0 0% 98%;
+    --card: 229 42% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 229 42% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 229 28% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 229 28% 18%;
+    --muted-foreground: 220 11% 74%;
+    --accent: 229 28% 18%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 228 24% 24%;
+    --input: 228 24% 24%;
+    --ring: 217 100% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

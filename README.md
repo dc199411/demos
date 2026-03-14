@@ -45,7 +45,7 @@ This repository contains example applications demonstrating various [Base] and [
 | **Mini Neynar** | MiniKit | `minikit/mini-neynar/` | MiniKit template with Neynar API integration for Farcaster data |
 | **Mini Zora** | MiniKit | `minikit/my-mini-zora/` | MiniKit template integrated with Zora protocol for NFT interactions |
 | **Simple Mini App** | MiniKit | `minikit/my-simple-mini-app/` | Basic MiniKit template with essential features and notifications |
-| **Three Card Monte** | MiniKit | `minikit/three-card-monte/` | Interactive card game mini app with onchain rewards and leaderboard |
+| **Multiverse Of Games** | MiniKit | `three-card-monte/` | Landing-first Base mini app with Three Card Monte gameplay, wallet identity, and modern UI |
 
 ## Getting Started
 
